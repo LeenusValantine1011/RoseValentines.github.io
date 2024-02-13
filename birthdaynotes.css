@@ -9,7 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-image: url('/Users/leenusvalantine/Desktop/birthday/Copy\ of\ A\ whole\ new\ world\ with\ you.png');
+  background-image: url('Copy\ of\ A\ whole\ new\ world\ with\ you.png');
   position: relative;
   background-size: cover;
   padding-top: 60px; /* Adjusted padding to avoid overlap with the heading */
