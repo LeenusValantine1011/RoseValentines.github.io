@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("/Users/leenusvalantine/Desktop/birthday/A_whole_new_world_with_you.png");
+    background-size: cover;
+    color: #fff; /* White text color */
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+    text-align: center;
+    z-index: 999; /* Ensure the navbar is above other content */
+  }
+  .navbar a {
+    color: #fff; /* White text color */
+    padding: 40px;
+    text-decoration: none;
+    margin:  20px;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 100px; /* Adjust as needed */
+  }
+  #countdown {
+    text-align: center;
+    margin-top: 230px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .timer-box {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .timer-number {
+    font-size: 72px;
+    margin-top: 10px;
+  }
+  .timer-wording {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .happy{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    color:rgb(255, 255, 255);
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="birthdaywishes.html">Buckets</a>
+  <a href="birthdaynotes.html">Notes</a>
+  <a href="birthdaygallery.html">Gallery</a>
+</div>
+<div id="countdown">
+  <div class="timer-box">
+    <div class="timer-number" id="days">0</div>
+    <div class="timer-wording">Days</div>
+  </div>
+  <div class="timer-box">
+    <div class="timer-number" id="hours">0</div>
+    <div class="timer-wording">Hours</div>
+  </div>
+  <div class="timer-box">
+    <div class="timer-number" id="minutes">0</div>
+    <div class="timer-wording">Minutes</div>
+  </div>
+  <div class="timer-box">
+    <div class="timer-number" id="seconds">0</div>
+    <div class="timer-wording">Seconds</div>
+  </div>
+</div>
+<h1 class="happy">Happy Valentine's Kanmani 🫂💜</h1>
+
+
+<script>
+// Update the countdown every second
+const x = setInterval(function() {
+
+  // Set the date we're counting down to (July 9th, 2022)
+  const countDownDate = new Date("Dec 16, 2022").getTime();
+  
+  // Get the current date and time
+  const now = new Date().getTime();
+    
+  // Calculate the distance between now and the countdown date
+  const distance = now - countDownDate;
+    
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Display the result in the elements with respective ids
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+}, 1000);
+</script>
+
+</body>
+</html>
